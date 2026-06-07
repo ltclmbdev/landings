@@ -23,8 +23,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: '**/package-lock.json'
 
       - name: Build all projects
         run: |
@@ -34,7 +32,7 @@ jobs:
             if [ -f "$project/package.json" ]; then
               echo "Building $project..."
               cd "$project"
-              npm ci
+              npm install
               npm run build
               cd ..
               cp -r "$project/dist/." "_site/$project/"

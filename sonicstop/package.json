@@ -1,0 +1,21 @@
+{
+  "name": "pdp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/inline-assets.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "fast-glob": "^3.3.3",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.2.4",
+    "vite-plugin-handlebars": "^2.0.0"
+  },
+  "dependencies": {
+    "embla-carousel": "^8.6.0"
+  }
+}

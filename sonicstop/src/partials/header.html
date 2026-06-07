@@ -1,0 +1,38 @@
+<header>
+  <div
+    class="bg-[#9D53D7] py-2 text-center text-white text-sm font-semibold uppercase"
+  >
+    <p>YOUR 50% DISCOUNT HAS BEEN APPLIED</p>
+  </div>
+  <div class="container">
+    <div class="flex items-center justify-between lg:py-8">
+      <a href="#" class="shrink-0 w-40 md:w-[215px]">
+        <img src="./assets/images/logo.png" alt="{{siteName}}" class="w-full" />
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="#" class="nav-link">Overview</a>
+        <a href="#" class="nav-link">Features</a>
+        <a href="#" class="nav-link">Reviews</a>
+        <a href="#" class="nav-link">FAQs</a>
+      </nav>
+
+      <button
+        type="button"
+        class="lg:hidden inline-flex size-9 items-center justify-center cursor-pointer"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <img src="./assets/images/icon-menu.svg" alt="Menu" class="size-6" />
+      </button>
+    </div>
+  </div>
+
+  <nav class="hidden lg:hidden" data-nav-mobile>
+    <div class="container flex flex-col items-start gap-0.5">
+      <a href="#" class="nav-link py-2.5 w-full">Home</a>
+      <a href="#" class="nav-link py-2.5 w-full">Contact</a>
+    </div>
+  </nav>
+</header>

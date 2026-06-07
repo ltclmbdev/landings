@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>{{siteName}} - Home</title>
+  </head>
+
+  <body class="min-h-screen flex flex-col text-navy">
+    {{> header}}
+
+    <main class="grow">
+      <section class="py-6 sm:py-12 md:py-16">
+        <div class="container">
+          <div
+            class="flex flex-col lg:flex-row gap-4 md:gap-8 xl:gap-14 w-full"
+          >
+            <div class="grow">
+              <!-- content goes here -->
+              <a href="#" class="btn-primary">Order Now & Save 50%</a>
+            </div>
+
+            <div class="min-w-0 max-w-[494px]">
+              <div class="gallery">
+                <div class="gallery__main-wrapper">
+                  <div class="gallery__main" id="embla-main">
+                    <div class="gallery__main-container">
+                      <div class="gallery__slide">
+                        <img src="/assets/images/slide-01.webp" alt="Slide 1" />
+                      </div>
+                      <div class="gallery__slide">
+                        <img src="/assets/images/slide-02.webp" alt="Slide 2" />
+                      </div>
+                      <div class="gallery__slide">
+                        <img src="/assets/images/slide-03.webp" alt="Slide 3" />
+                      </div>
+                      <div class="gallery__slide">
+                        <img src="/assets/images/slide-04.webp" alt="Slide 4" />
+                      </div>
+                      <div class="gallery__slide">
+                        <img src="/assets/images/slide-05.webp" alt="Slide 5" />
+                      </div>
+                    </div>
+                  </div>
+                  <button class="gallery__arrow gallery__arrow--prev" type="button" aria-label="Previous slide">
+                    <img src="/assets/images/icon-left.svg" alt="" />
+                  </button>
+                  <button class="gallery__arrow gallery__arrow--next" type="button" aria-label="Next slide">
+                    <img src="/assets/images/icon-left.svg" alt="" />
+                  </button>
+                </div>
+                <div class="gallery__thumbs" id="embla-thumbs">
+                  <div class="gallery__thumbs-container">
+                    <button class="gallery__thumb" type="button" data-index="0">
+                      <img
+                        src="/assets/images/slide-01.webp"
+                        alt="Slide 1"
+                        loading="lazy"
+                      />
+                    </button>
+                    <button class="gallery__thumb" type="button" data-index="1">
+                      <img
+                        src="/assets/images/slide-02.webp"
+                        alt="Slide 2"
+                        loading="lazy"
+                      />
+                    </button>
+                    <button class="gallery__thumb" type="button" data-index="2">
+                      <img
+                        src="/assets/images/slide-03.webp"
+                        alt="Slide 3"
+                        loading="lazy"
+                      />
+                    </button>
+                    <button class="gallery__thumb" type="button" data-index="3">
+                      <img
+                        src="/assets/images/slide-04.webp"
+                        alt="Slide 4"
+                        loading="lazy"
+                      />
+                    </button>
+                    <button class="gallery__thumb" type="button" data-index="4">
+                      <img
+                        src="/assets/images/slide-05.webp"
+                        alt="Slide 5"
+                        loading="lazy"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

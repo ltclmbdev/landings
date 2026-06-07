@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("./assets/fonts/roboto/Roboto-Regular.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("./assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-brand: #9d53d7;
+  --color-text-body: #000000;
+  --color-text-body-alt: #494949;
+  --color-blue: #1587eb;
+  --color-blue-alt: #146bb7;
+
+  --font-primary: "Roboto", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    font-family: var(--font-primary);
+    @apply antialiased md:text-lg text-(--color-text-body);
+  }
+
+  h1,
+  .h1 {
+    @apply text-3xl leading-tight font-bold sm:text-3xl xl:text-4xl;
+  }
+
+  h2,
+  .h2 {
+    @apply text-2xl font-bold md:text-[32px];
+  }
+
+  h3,
+  .h3 {
+    @apply text-xl font-bold md:text-2xl;
+  }
+  h4,
+  .h4 {
+    @apply text-lg font-bold md:text-xl;
+  }
+
+  a {
+    @apply transition-colors duration-150;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-(--color-blue) px-4 py-3.5 font-bold tracking-[0.7px] uppercase text-white transition-all duration-200 hover:bg-(--color-blue-alt) border-b-3 text-center border-(--color-blue-alt);
+  }
+}
+
+@utility container {
+  @apply mx-auto w-full px-4 xl:max-w-[1248px];
+}
+
+/* Navigation */
+.nav-link {
+  @apply text-(--color-text-body) font-bold transition-colors duration-200 hover:text-(--color-brand);
+}
+
+/* Gallery */
+.gallery {
+  @apply flex flex-col gap-2.5;
+}
+
+.gallery__thumbs {
+  @apply overflow-hidden md:overflow-visible w-full md:w-auto md:shrink-0 block md:self-stretch md:flex md:flex-col;
+  @apply md:flex-[0_0_104px];
+}
+
+.gallery__thumbs-container {
+  @apply flex gap-1 md:gap-1.75;
+  touch-action: pan-x;
+}
+
+.gallery__thumb {
+  @apply shrink-0 basis-0 flex-1 cursor-pointer rounded-md border border-transparent overflow-hidden p-0 bg-transparent transition-[border-color] duration-200 aspect-square md:aspect-auto md:min-h-0;
+}
+
+.gallery__thumb img {
+  @apply block size-full object-cover;
+}
+
+.gallery__thumb--selected {
+  @apply border-(--color-brand);
+}
+
+.gallery__main-wrapper {
+  @apply relative flex-1 min-w-0;
+}
+
+.gallery__main {
+  @apply overflow-hidden rounded-[10px];
+}
+
+.gallery__arrow {
+  @apply absolute top-1/2 -translate-y-1/2 z-10 bg-[#DFDFDFCC] rounded-sm size-9 flex items-center justify-center cursor-pointer border-0 p-0 transition-opacity duration-200;
+}
+
+.gallery__arrow--prev {
+  @apply left-4;
+}
+
+.gallery__arrow--next {
+  @apply right-4;
+  img {
+    transform: scaleX(-1);
+  }
+}
+
+.gallery__main-container {
+  @apply flex;
+  touch-action: pan-y;
+}
+
+.gallery__slide {
+  @apply shrink-0 basis-full min-w-0 aspect-square;
+}
+
+.gallery__slide + .gallery__slide {
+  @apply ml-3;
+}
+
+.gallery__slide img {
+  @apply block size-full object-cover rounded-[10px] bg-white;
+}
+
+@media (min-width: 768px) {
+  .gallery__thumbs-container {
+    touch-action: pan-y;
+  }
+}

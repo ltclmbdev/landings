@@ -32,7 +32,7 @@ jobs:
             if [ -f "$project/package.json" ]; then
               echo "Building $project..."
               cd "$project"
-              npm install
+              npm ci
               npm run build
               cd ..
               cp -r "$project/dist/." "_site/$project/"

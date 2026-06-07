@@ -17,5 +17,10 @@
   },
   "dependencies": {
     "embla-carousel": "^8.6.0"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.43.0",
+    "@rollup/rollup-darwin-arm64": "^4.43.0",
+    "@rollup/rollup-darwin-x64": "^4.43.0"
   }
 }
